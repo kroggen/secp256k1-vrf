@@ -17,6 +17,7 @@ jobs:
     - name: build gen_context
       shell: cmd
       run: |
+        call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
         cl -I. -DECMULT_GEN_PREC_BITS=4 src/gen_context.c
         gen_context.exe
 
